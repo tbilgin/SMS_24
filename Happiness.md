@@ -1,35 +1,23 @@
-# Skripte für R-Recap
+# 1. Einführung und Entdeckung vom Datensatz
 
-## Einführung und Entdeckung vom Dataset
-
-Wir werden das Datai zuerst hochladen und schauen schnell, wie es aussieht: 
+Wir werden den Datensatz zuerst herunterladen, im R Studio öffen und schauen schnell, wie es aussieht: 
 ```
-mydata = read.table("happiness", header = T)
-attach(mydata)
+library(readxl)
+DataForTable2_1 <- read_excel("DataForTable2.1.xls")
+mydata <- DataForTable2_1
 head(mydata)
-```
-Welche Werte haben die Faktoren?
-```
-apply(mydata[,3:9], 2, mean)
-```
-Falls ich nur Happiness-Werte sehen möchte?
-```
-Happiness
-```
-Probiere das jetzt mit anderen Faktoren.
-
-
-Was sind die Dimensione, wie lang und wie breit ist das Dataset?
-```
+str(mydata)
+summary(mydata)
+colnames(mydata)
 dim(mydata)
 ```
-Wie viele Länder sind in unserem Dataset?
+Wie viele Länder sind in unserem Datensatz?
 
 ```
-unique(Countryname)
+
 ```
 
-## Welche Faktoren spielen die grösste Rolle in Happiness?
+## 2. Welche Faktoren spielen die grösste Rolle in Happiness?
 
 Zuerst sehen wir mal das Figur:
 ```
@@ -37,24 +25,24 @@ plot(mydata)
 ```
 Werden wir unglücklicher mit der Zeit?
 ```
-cor.test(Happiness, Year, method = "spearman")
+
 ```
-Ok, jeder berechnet einen Korrelationskoeffizient so dass wir ein Figur machen können:
+Ok, jetzt berechnen wir die Korrelationskoeffiziente:
 ```
-cor.test(Happiness, LogGDPpercapita, method = "spearman")
-cor.test(Happiness, Socialsupport, method = "spearman")
-cor.test(Happiness, Healthylifeexpectancyatbirth, method = "spearman")
-cor.test(Happiness, Freedomtomakelifechoices, method = "spearman")
-cor.test(Happiness, Generosity, method = "spearman")
-cor.test(Happiness, Perceptionsofcorruption, method = "spearman")
+cor(mydata[,-1])
+cor(mydata[,-1])
+cor(mydata[,-1], use="pairwise.complete.obs")
 ```
-Die Rho-Werte sind die Korrelationskoeffiziente. Also die sagen uns die Rolee jede Faktor auf die Glücklichkeit spielt. Jetzt zeichnen wir mal das Figur:
+Diese sind die Korrelationskoeffiziente. Also die sagen uns die Rolle jede Faktor auf die Glücklichkeit spielt. Jetzt zeichnen wir mal die Figur:
 ```
-par(mai=c(1,3,1,1))
-barplot(c(-0.31, 0.15, 0.51, 0.78, 0.76, 0.79),las=1, names.arg = colnames(mydata)[9:4], horiz = T)
+happiness.corrs = cor(mydata[,-1], use="pairwise.complete.obs")[,2]
+barplot(happiness.corrs)
+barplot(happiness.corrs, horiz = T)
+barplot(happiness.corrs, las=1, horiz = T)
+happiness.corrs = cor(mydata[,-1], use="pairwise.complete.obs")[c(1,3:8),2]
 ```
 
-# Hausaufgabe
+# Datenverarbeitung mit TidyR
 ```
 install.packages('tidyverse')
 library(tidyverse)
