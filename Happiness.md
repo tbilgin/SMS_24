@@ -29,7 +29,7 @@ Werden wir unglücklicher mit der Zeit?
 ```
 Ok, jetzt berechnen wir die Korrelationskoeffiziente:
 ```
-cor(mydata[,-1])
+cor(mydata)
 cor(mydata[,-1])
 cor(mydata[,-1], use="pairwise.complete.obs")
 ```
