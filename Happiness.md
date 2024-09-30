@@ -17,7 +17,7 @@ Wie viele Länder sind in unserem Datensatz?
 
 ```
 
-# 2. Korrelationanalyse
+# 2. Korrelationsanalyse
 
 ```
 cor(mydata)
