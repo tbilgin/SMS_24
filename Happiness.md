@@ -91,6 +91,11 @@ Und jetzt bilden wir das Model:
 trend <- lm(Zufriedenheit ~ BIP, data = Einkommen)
 summary(trend)
 ```
+Um den Korrelationskoeffizient zu berechnen:
+```
+R2 = summary(trend)$r.squared
+sqrt(R2)
+```
 
 
 
