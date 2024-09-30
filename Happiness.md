@@ -46,3 +46,38 @@ barplot(happiness.corrs, las=1, horiz = T, cex.names = 0.7)
 
 ```
 
+## 3. Tidyverse
+
+Zuerst installieren wir die Pakete:
+```
+install.packages('tidyverse')
+library(tidyverse)
+install.packages("corrr")
+library(corrr)
+```
+
+Und jetzt die Korrelationanalyse:
+```
+mydata %>%                                                          
+  select(-`Country name`) %>%
+  correlate()
+```
+Wir kännen auch an einzelne Spalten schauen und zwar mit Durchschnittwerten:
+
+```
+mydata %>%                                                        
+  group_by(`Country name`) %>%                            
+    summarise_at(vars(`Life Ladder`, `Log GDP per capita`),       
+               list(avg = mean)) %>%  
+  select(-`Country name`) %>%
+  correlate()
+```
+
+
+
+
+
+
+
+
+
