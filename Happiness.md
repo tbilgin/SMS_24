@@ -40,5 +40,9 @@ barplot(happiness.corrs)
 barplot(happiness.corrs, horiz = T)
 barplot(happiness.corrs, las=1, horiz = T)
 happiness.corrs = cor(mydata[,-1], use="pairwise.complete.obs")[c(1,3:8),2]
+barplot(happiness.corrs, las=1, horiz = T, cex.names = 0.7)
+par(mar = c(5, 10, 4, 2))
+barplot(happiness.corrs, las=1, horiz = T, cex.names = 0.7)
+
 ```
 
