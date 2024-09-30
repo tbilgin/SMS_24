@@ -17,7 +17,7 @@ Wie viele Länder sind in unserem Datensatz?
 
 ```
 
-## 2. Welche Faktoren spielen die grösste Rolle in Happiness?
+# 2. Welche Faktoren spielen die grösste Rolle in Happiness?
 
 Zuerst sehen wir mal das Figur:
 ```
@@ -46,7 +46,7 @@ barplot(happiness.corrs, las=1, horiz = T, cex.names = 0.7)
 
 ```
 
-## 3. Tidyverse
+# 3. Tidyverse
 
 Zuerst installieren wir die Pakete:
 ```
@@ -84,6 +84,26 @@ plot(mydata %>%
 plot(mydata %>%                                                          
   select(`Life Ladder`, `Log GDP per capita`))
 ```
+
+# 4. Lineare Regression
+
+Für ein linear Regressionsmodell zu bilden, das den Zusammenhang zwischen Einkommen, erstellen wir zuerst einen neuen Datensatz, einen Subset:
+
+```
+Einkommen <- mydata %>%                                                          
+  select(`Life Ladder`, `Log GDP per capita`)
+colnames(Einkommen)<- c("Zufriedenheit","BIP")
+```
+
+Und jetzt bilden wir das Model:
+```
+trend <- lm(Zufriedenheit ~ BIP, data = Einkommen)
+summary(trend)
+```
+
+
+
+
 
 
 
