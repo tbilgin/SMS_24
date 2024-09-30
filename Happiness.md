@@ -17,23 +17,14 @@ Wie viele Länder sind in unserem Datensatz?
 
 ```
 
-# 2. Welche Faktoren spielen die grösste Rolle in Happiness?
+# 2. Korrelationanalyse
 
-Zuerst sehen wir mal das Figur:
-```
-plot(mydata)
-```
-Werden wir unglücklicher mit der Zeit?
-```
-
-```
-Ok, jetzt berechnen wir die Korrelationskoeffiziente:
 ```
 cor(mydata)
 cor(mydata[,-1])
 cor(mydata[,-1], use="pairwise.complete.obs")
 ```
-Diese sind die Korrelationskoeffiziente. Also die sagen uns die Rolle jede Faktor auf die Glücklichkeit spielt. Jetzt zeichnen wir mal die Figur:
+Diese sind die Korrelationskoeffiziente. Also die sagen uns die Rolle jede Faktor auf die Zufriedenheit spielt. Jetzt zeichnen wir mal die Figur:
 ```
 happiness.corrs = cor(mydata[,-1], use="pairwise.complete.obs")[,2]
 barplot(happiness.corrs)
