@@ -73,6 +73,18 @@ mydata %>%
   correlate()
 ```
 
+Jetzt Plots:
+
+```
+plot(mydata %>%                                                        
+       group_by(`Country name`) %>%                            
+       summarise_at(vars(`Life Ladder`, `Log GDP per capita`),       
+                    list(avg = mean)) %>%  
+       select(-`Country name`))
+plot(mydata %>%                                                          
+  select(`Life Ladder`, `Log GDP per capita`))
+```
+
 
 
 
