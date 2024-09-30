@@ -62,7 +62,7 @@ mydata %>%
   select(-`Country name`) %>%
   correlate()
 ```
-Wir kännen auch an einzelne Spalten schauen und zwar mit Durchschnittwerten:
+Wir können auch einzelne Spalten mit Durchschnittswerten betrachten:
 
 ```
 mydata %>%                                                        
