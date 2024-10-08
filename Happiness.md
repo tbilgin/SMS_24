@@ -123,6 +123,20 @@ colnames(mydata.num)[2] <- "Zufriedenheit"
 summary(lm(Zufriedenheit ~ ., data = mydata.num))
 ```
 
+# Linerität
+
+Um zu verinfachen:
+```
+colnames(mydata)[3] <- "Zufriedenheit"
+```
+Erstellen wir einige Plots:
+```
+plot(mydata$`Log GDP per capita`, mydata$Zufriedenheit)
+```
+
+
+
+
 
 
 
