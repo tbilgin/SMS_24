@@ -97,9 +97,15 @@ Residuen: Differenz zwischen den beobachteten und den erwarteten Werten. Wir kö
 ```
 hist(trend$residuals)
 hist(Einkommen$Zufriedenheit-trend$fitted.values)
-
+```
+Es gibt eine Ermahnung, warum?
+```
+hist(na.omit(Einkommen)$Zufriedenheit-trend$fitted.values)
+```
+Jetz können wir auch die Quartile betrachten:
+```
 summary(trend$residuals)
-summary(trend$residuals)
+summary(na.omit(Einkommen)$Zufriedenheit-trend$fitted.values)
 
 ```
 
