@@ -109,15 +109,18 @@ summary(na.omit(Einkommen)$Zufriedenheit-trend$fitted.values)
 
 ```
 
-
-
-
 Um den Korrelationskoeffizient zu berechnen:
 ```
 R2 = summary(trend)$r.squared
 sqrt(R2)
 ```
 
+# Multiple lineare Regression
+
+```
+colnames(mydata)[3] <- "Zufriedenheit"
+summary(lm(Zufriedenheit ~ ., data = mydata[, seq(3,9)]))
+```
 
 
 
