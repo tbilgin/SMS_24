@@ -134,6 +134,34 @@ Erstellen wir einige Plots:
 plot(mydata$`Log GDP per capita`, mydata$Zufriedenheit)
 ```
 
+# Korrelationen zwischen unabhängigen Variablen
+
+```
+model <- summary(lm(Zufriedenheit ~ ., data = mydata.num))
+library(car)
+vif(model)
+```
+
+
+
+
+
+
+
+
+Wir brauchen ein Paket:
+```
+install.packages("Hmisc")
+library(Hmisc)
+```
+Jettzt erstellen wir die Plots:
+```
+par(mar = c(1, 1, 1, 1))
+hist.data.frame(mydata.num)
+```
+
+
+
 
 
 
