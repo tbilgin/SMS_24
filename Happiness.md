@@ -91,6 +91,16 @@ Und jetzt bilden wir das Model:
 trend <- lm(Zufriedenheit ~ BIP, data = Einkommen)
 summary(trend)
 ```
+
+## Trendlinie erstellen
+
+```
+plot(Einkommen$BIP, Einkommen$Zufriedenheit)
+abline(trend,col="red")
+```
+
+
+
 ## ein ausführlicher Blick auf die Ausgabe
 
 Residuen: Differenz zwischen den beobachteten und den erwarteten Werten. Wir können die gleichen Werte erstellen, indem wir die aktuellen Werte nehmen und sie von den erwarteten Werten des Modells subtrahieren:
