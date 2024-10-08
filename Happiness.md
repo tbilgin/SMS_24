@@ -91,6 +91,21 @@ Und jetzt bilden wir das Model:
 trend <- lm(Zufriedenheit ~ BIP, data = Einkommen)
 summary(trend)
 ```
+## ein ausführlicher Blick auf die Ausgabe
+
+Residuen: Differenz zwischen den beobachteten und den erwarteten Werten. Wir können die gleichen Werte erstellen, indem wir die aktuellen Werte nehmen und sie von den erwarteten Werten des Modells subtrahieren:
+```
+hist(trend$residuals)
+hist(Einkommen$Zufriedenheit-trend$fitted.values)
+
+summary(trend$residuals)
+summary(trend$residuals)
+
+```
+
+
+
+
 Um den Korrelationskoeffizient zu berechnen:
 ```
 R2 = summary(trend)$r.squared
