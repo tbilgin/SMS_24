@@ -118,8 +118,9 @@ sqrt(R2)
 # Multiple lineare Regression
 
 ```
-colnames(mydata)[3] <- "Zufriedenheit"
-summary(lm(Zufriedenheit ~ ., data = mydata[, seq(3,9)]))
+mydata.num <- mydata[, seq(2,9)]
+colnames(mydata.num)[2] <- "Zufriedenheit"
+summary(lm(Zufriedenheit ~ ., data = mydata.num))
 ```
 
 
