@@ -142,23 +142,24 @@ library(car)
 vif(model)
 ```
 
-
-
-
-
-
-
+# Normalität
 
 Wir brauchen ein Paket:
 ```
 install.packages("Hmisc")
 library(Hmisc)
 ```
-Jettzt erstellen wir die Plots:
+Jetzt erstellen wir die Plots:
 ```
 par(mar = c(1, 1, 1, 1))
 hist.data.frame(mydata.num)
 ```
+Und testen:
+```
+lapply(mydata.num, shapiro.test)
+```
+
+
 
 
 
