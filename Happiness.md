@@ -147,7 +147,7 @@ plot(mydata$`Log GDP per capita`, mydata$Zufriedenheit)
 # Korrelationen zwischen unabhängigen Variablen
 
 ```
-model <- summary(lm(Zufriedenheit ~ ., data = mydata.num))
+model <- lm(Zufriedenheit ~ ., data = mydata.num)
 library(car)
 vif(model)
 ```
