@@ -1,20 +1,21 @@
 # Logistische Regression
+## Pakete installieren 
 ```
 install.packages("mlbench")
-data("PimaIndiansDiabetes2", package = "mlbench")
-```
+library(mlbench)
 
+install.packages('tidyverse')
+library(tidyverse)
 ```
+## Datensatz
+```
+data("PimaIndiansDiabetes2", package = "mlbench")
 head(PimaIndiansDiabetes2)
 glimpse(PimaIndiansDiabetes2)
 ```
-```
-apply(PimaIndiansDiabetes2[,1:8], 2, shapiro.test)
-```
+## Datenreinigung
 ```
 diabetes.data <- na.omit(PimaIndiansDiabetes2)
-```
-```
 diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
   head()
@@ -24,17 +25,19 @@ diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
   glimpse()
 ```
-
+## Erstes Figur
 ```
 diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
   ggplot(aes(glucose, prob)) +
   geom_point(alpha = 0.2)
 ```
+## Modellbildung
 ```
 model <- glm( diabetes ~., data = diabetes.data, family = binomial)
 summary(model)
 ```
+## Regressionsfigur
 ```
 diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
@@ -46,6 +49,7 @@ diabetes.data %>%
     y = "Diabetes"
   )
 ```
+## Resultate
 ```
 exp(summary(model)$coeff[,1])
 ```
