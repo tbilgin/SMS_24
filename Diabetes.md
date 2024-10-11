@@ -13,7 +13,7 @@ data("PimaIndiansDiabetes2", package = "mlbench")
 head(PimaIndiansDiabetes2)
 glimpse(PimaIndiansDiabetes2)
 ```
-## Datenreinigung
+## Datenbereinigung
 ```
 diabetes.data <- na.omit(PimaIndiansDiabetes2)
 diabetes.data %>%
@@ -25,7 +25,7 @@ diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
   glimpse()
 ```
-## Erstes Figur
+## Erste Figur
 ```
 diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
