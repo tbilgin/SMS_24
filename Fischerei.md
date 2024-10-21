@@ -53,10 +53,11 @@ Wir werden eine Poisson Regression zwischen Ort (site) und der gefegten Fläche 
 ```
 summary(glm(totabund ~ sweptarea, data = fishing, family = poisson))
 
-ggplot(fishing, aes(site, sweptarea)) +
+ggplot(fishing, aes(sweptarea, totabund)) +
   geom_point(alpha = 0.2) +
   geom_smooth(method = "glm", method.args = list(family = "poisson"))
 ```
+<img width="387" alt="Bildschirmfoto 2024-10-21 um 15 05 57" src="https://github.com/user-attachments/assets/9ac53a1b-9a0d-4d19-b5b2-379c18a9e2c3">
 
 ![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/2218dad3-e161-44b8-adb7-dc646e31c99c)
 
