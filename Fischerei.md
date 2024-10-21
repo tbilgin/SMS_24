@@ -45,7 +45,8 @@ ggplot(fishing, aes(sweptarea, totabund)) +
 ```
 <img width="387" alt="Bildschirmfoto 2024-10-21 um 15 05 57" src="https://github.com/user-attachments/assets/9ac53a1b-9a0d-4d19-b5b2-379c18a9e2c3">
 
-![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/2218dad3-e161-44b8-adb7-dc646e31c99c)
+<img width="622" alt="Bildschirmfoto 2024-10-21 um 16 32 02" src="https://github.com/user-attachments/assets/909d9512-2572-4427-b123-daa585afdb76">
+
 
 ## Gab es mehr Fänge vorher?
 
