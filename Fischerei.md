@@ -20,6 +20,7 @@ ggplot(fishing, aes(meandepth, totabund)) +
   geom_point(alpha = 0.2) +
   geom_smooth(method = "glm", method.args = list(family = "poisson"))
 ```
+<img width="779" alt="image" src="https://github.com/user-attachments/assets/db999ee5-12d2-464a-96ca-b51474cd51f1">
 
 
 # Hausaufgabe
@@ -60,8 +61,6 @@ ggplot(fishing, aes(sweptarea, totabund)) +
 <img width="387" alt="Bildschirmfoto 2024-10-21 um 15 05 57" src="https://github.com/user-attachments/assets/9ac53a1b-9a0d-4d19-b5b2-379c18a9e2c3">
 
 ![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/2218dad3-e161-44b8-adb7-dc646e31c99c)
-
-<img width="751" alt="Bildschirmfoto 2023-12-15 um 15 34 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/bdc97ba5-c4e2-4cd9-b940-b85b7ca901b9">
 
 # Mögliche Antwort 3: Logistiche Regression, ggplot und tidyR
 
