@@ -11,7 +11,6 @@ shapiro.test(co2$concentration)
 hist(co2$concentration)
 ```
 
-<img width="443" alt="Bildschirmfoto 2023-11-15 um 16 01 24" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/fc9cc492-e571-4f39-90e3-421202d93618">
 
 ## Lineares Modell
 Bilde ein lineares Modell zwischen CO2 und Zeit. Dann zeichne das mit ggplot.
