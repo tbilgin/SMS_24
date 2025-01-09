@@ -17,6 +17,29 @@ Wie viele Länder sind in unserem Datensatz?
 
 ```
 
+# Übungen mit tidyverse
+
+
+```
+mydata  %>%  filter(Countryname == "Switzerland" & Year > 2010) %>% group_by(Year)
+```
+<img width="799" alt="Bildschirmfoto 2023-09-27 um 10 32 50" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/47adbeaf-e4f1-41a6-a28c-d4bf3470b3d5">
+
+
+
+```
+
+mydata %>% group_by(Countryname) %>%  select(-(LogGDPpercapita:Generosity)) %>% filter(Perceptionsofcorruption == min(Perceptionsofcorruption))
+
+```
+<img width="418" alt="Bildschirmfoto 2023-09-27 um 10 37 19" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/df690d2e-9efe-41a6-938a-6180232f3124">
+
+```
+mydata %>% group_by(Countryname) %>% summarise(avg_GDP = mean(LogGDPpercapita), st_dev = sd(LogGDPpercapita))
+```
+<img width="308" alt="Bildschirmfoto 2023-09-27 um 10 39 05" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/638c953c-47d7-400c-a4c5-40c05c8b1f26">
+
+
 # 2. Korrelationsanalyse
 
 ```
