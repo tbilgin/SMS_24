@@ -8,6 +8,11 @@ install.packages('tidyverse')
 library(tidyverse)
 ```
 ## Datensatz
+
+Dieser Datensatz stammt ursprünglich vom National Institute of Diabetes and Digestive and Kidney Diseases. Ziel des Datensatzes ist es, anhand bestimmter diagnostischer Messungen, die im Datensatz enthalten sind, diagnostisch vorherzusagen, ob ein Patient an Diabetes erkrankt oder nicht. Die Auswahl dieser Fälle aus einer größeren Datenbank wurde mehreren Einschränkungen unterworfen. Insbesondere sind hier alle Patientinnen mindestens 21 Jahre alt und stammen aus Pima-Indianern.
+Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., & Johannes, R.S. (1988). Using the ADAP learning algorithm to forecast the onset of diabetes mellitus. In Proceedings of the Symposium on Computer Applications and Medical Care (pp. 261--265). IEEE Computer Society Press.
+
+Hier ist die [Beschreibung](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database).
 ```
 data("PimaIndiansDiabetes2", package = "mlbench")
 head(PimaIndiansDiabetes2)
