@@ -18,7 +18,13 @@ Wie viele Länder sind in unserem Datensatz?
 ```
 
 # Übungen mit tidyverse
-
+Zuerst installieren wir die Pakete:
+```
+install.packages('tidyverse')
+library(tidyverse)
+install.packages("corrr")
+library(corrr)
+```
 
 ```
 mydata  %>%  filter(Countryname == "Switzerland" & Year > 2010) %>% group_by(Year)
@@ -60,17 +66,7 @@ barplot(happiness.corrs, las=1, horiz = T, cex.names = 0.7)
 
 ```
 
-# 3. Tidyverse
-
-Zuerst installieren wir die Pakete:
-```
-install.packages('tidyverse')
-library(tidyverse)
-install.packages("corrr")
-library(corrr)
-```
-
-Und jetzt die Korrelationanalyse:
+Und jetzt mit tiyverse
 ```
 mydata %>%                                                          
   select(-`Country name`) %>%
@@ -99,7 +95,7 @@ plot(mydata %>%
   select(`Life Ladder`, `Log GDP per capita`))
 ```
 
-# 4. Lineare Regression
+# 3. Lineare Regression
 
 Für ein linear Regressionsmodell zu bilden, das den Zusammenhang zwischen Einkommen, erstellen wir zuerst einen neuen Datensatz, einen Subset:
 
@@ -115,13 +111,15 @@ trend <- lm(Zufriedenheit ~ BIP, data = Einkommen)
 summary(trend)
 ```
 
+
+
 ## Trendlinie erstellen
 
 ```
 plot(Einkommen$BIP, Einkommen$Zufriedenheit)
 abline(trend,col="red")
 ```
-
+<img width="207" alt="Bildschirmfoto 2023-09-27 um 14 05 57" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/b2f97f3a-94fc-43b4-867f-afb47248c08f">
 
 
 ## ein ausführlicher Blick auf die Ausgabe
