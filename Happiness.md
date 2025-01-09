@@ -1,5 +1,13 @@
 # 1. Einführung und Entdeckung vom Datensatz
 
+Hier ist [der Datensatz](https://worldhappiness.report). 
+
+Der World Happiness Report ist eine Veröffentlichung des Sustainable Development Solutions Network, die auf den Daten der Gallup World Poll basiert.
+Der World Happiness Report wurde von einer Gruppe unabhängiger Experten verfasst, die im Rahmen ihrer persönlichen Befugnisse handelten. Die in diesem Bericht geäußerten Ansichten spiegeln nicht unbedingt die Ansichten einer Organisation, Agentur oder eines Programms der Vereinten Nationen wider.
+
+<img width="473" alt="Bildschirmfoto 2025-01-09 um 11 44 39" src="https://github.com/user-attachments/assets/360249db-28df-4411-8835-0424c294eb3d" />
+
+
 Wir werden den Datensatz zuerst herunterladen, im R Studio öffen und schauen schnell, wie es aussieht: 
 ```
 library(readxl)
