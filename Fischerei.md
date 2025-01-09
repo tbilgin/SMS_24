@@ -1,5 +1,5 @@
 
-# Fischerei
+# Zähldaten über die Fischerei: Wie viele Fische wurden gefangen?
 
 Zuerst laden wir die Pakete und schauen an die Daten.
 ```
@@ -9,6 +9,8 @@ library(ggplot2)
 library(tidyverse)
 data(fishing)
 ```
+<img width="718" alt="Bildschirmfoto 2025-01-09 um 11 53 37" src="https://github.com/user-attachments/assets/946d752f-f617-4f10-bdb1-441f7828bcf1" />
+
 ## Wie wirkt sich die Tiefe auf die Anzahl der Fänge aus?
 ```
 summary(glm(totabund ~ meandepth, data = fishing, family = poisson))
