@@ -111,7 +111,7 @@ trend <- lm(Zufriedenheit ~ BIP, data = Einkommen)
 summary(trend)
 ```
 
-
+<img width="207" alt="Bildschirmfoto 2023-09-27 um 14 05 57" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/b2f97f3a-94fc-43b4-867f-afb47248c08f">
 
 ## Trendlinie erstellen
 
@@ -119,7 +119,7 @@ summary(trend)
 plot(Einkommen$BIP, Einkommen$Zufriedenheit)
 abline(trend,col="red")
 ```
-<img width="207" alt="Bildschirmfoto 2023-09-27 um 14 05 57" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/b2f97f3a-94fc-43b4-867f-afb47248c08f">
+
 
 
 ## ein ausführlicher Blick auf die Ausgabe
@@ -191,6 +191,9 @@ lapply(mydata.num, shapiro.test)
 ```
 
 
+# 4. Vergleich mit eurer Erwartung
+
+<img width="840" alt="Bildschirmfoto 2025-01-09 um 11 40 16" src="https://github.com/user-attachments/assets/81a76705-4853-42bd-a12a-07b697193269" />
 
 
 
